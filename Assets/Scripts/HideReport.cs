@@ -5,11 +5,12 @@ using TMPro;
 
 public class HideReport : MonoBehaviour
 {
-    void OnValueChanged()
+	public GameObject dropdown;
+	public void OnValueChanged()
     {
-        if (GetComponent<TMP_Dropdown>().value == 0)
+	    if (GetComponent<TMP_Dropdown>().value == 0)
         {
-            Destroy(gameObject);
+            Destroy(dropdown);
         } else
         {
             print("Post reported!");
