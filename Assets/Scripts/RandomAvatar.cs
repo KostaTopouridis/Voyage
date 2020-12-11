@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class RandomAvatar : MonoBehaviour
 {
     public List<Sprite> avatars = new List<Sprite>();
-
+    public Sprite avatar;
     public void Start()
     {
-        GetComponent<Image>().sprite = avatars[Random.Range(0, avatars.Count)];
+        avatar = avatars[Random.Range(0, avatars.Count)];
+        GetComponent<Image>().sprite = avatar;        
     }
 }
